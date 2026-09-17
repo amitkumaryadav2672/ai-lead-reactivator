@@ -73,11 +73,11 @@ export default function App() {
       });
       const data = await res.json();
       if (data.success) {
-        showToast(`⚡ Lead ${data.data.name} reactivated successfully!`);
+        showToast(`Lead ${data.data.name} reactivated successfully!`);
         fetchData();
       }
     } catch (err) {
-      showToast('❌ Error reactivating lead.');
+      showToast('Error reactivating lead.');
     }
   };
 
@@ -95,7 +95,7 @@ export default function App() {
         fetchData();
       }
     } catch (err) {
-      showToast('❌ Error updating lead status.');
+      showToast('Error updating lead status.');
     }
   };
 
@@ -112,7 +112,7 @@ export default function App() {
         fetchData();
       }
     } catch (err) {
-      showToast('❌ Error deleting lead.');
+      showToast('Error deleting lead.');
     }
   };
 

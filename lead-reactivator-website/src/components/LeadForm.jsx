@@ -304,7 +304,7 @@ export default function LeadForm() {
           </button>
 
           <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '14px' }}>
-            🔒 Data is encrypted and transmitted directly to MongoDB at <span style={{ fontFamily: 'monospace' }}>localhost:5000</span>.
+            Data is encrypted and transmitted directly to MongoDB at <span style={{ fontFamily: 'monospace' }}>localhost:5000</span>.
           </p>
         </form>
       )}

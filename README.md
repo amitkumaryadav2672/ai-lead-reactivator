@@ -1,10 +1,10 @@
-# 🚀 AI Lead Reactivator
+# AI Lead Reactivator
 
 An autonomous, full-stack lead recovery and reactivation suite that turns cold, dormant CRM leads into high-converting sales conversations.
 
 ---
 
-## 🌟 System Architecture & Flow
+## System Architecture and Flow
 
 ```mermaid
 sequenceDiagram
@@ -12,7 +12,7 @@ sequenceDiagram
     actor User as Website Visitor
     participant Web as Next.js Website (:3000)
     participant API as Express.js Backend (:5000)
-    participant DB as MongoDB (:27017)
+    participant DB as MongoDB
     actor Admin as Sales Admin
     participant Portal as React Admin Portal (:5173)
 
@@ -33,52 +33,52 @@ sequenceDiagram
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ai-lead-reactivator/
-├── lead-reactivator-admin/      → React.js (Vite) Admin Command Center
+├── lead-reactivator-admin/      -> React.js (Vite) Admin Command Center
 │   ├── src/
-│   │   ├── components/          → Sidebar, Header, LeadModal
-│   │   ├── pages/               → Dashboard (KPIs, Funnel), Leads (Filters, Table)
-│   │   ├── App.jsx              → Main State, Polling & CRUD Actions
-│   │   ├── index.css            → Modern Dark Glassmorphic Design System
+│   │   ├── components/          -> Sidebar, Header, LeadModal
+│   │   ├── pages/               -> Dashboard (KPIs, Funnel), Leads (Filters, Table)
+│   │   ├── App.jsx              -> Main State, Polling & CRUD Actions
+│   │   ├── index.css            -> Modern Dark Glassmorphic Design System
 │   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js
 │
-├── lead-reactivator-website/    → Next.js Modern Landing Page & Lead Capture
+├── lead-reactivator-website/    -> Next.js Modern Landing Page & Lead Capture
 │   ├── src/
 │   │   ├── app/
-│   │   │   ├── layout.js        → Root Layout & Metadata
-│   │   │   ├── page.js          → Landing Page with Hero & Features
-│   │   │   └── globals.css      → Glows, Typography & Component Styling
+│   │   │   ├── layout.js        -> Root Layout & Metadata
+│   │   │   ├── page.js          -> Landing Page with Hero & Features
+│   │   │   └── globals.css      -> Glows, Typography & Component Styling
 │   │   └── components/
-│   │       ├── Navbar.jsx       → Navigation & Quick Links
-│   │       └── LeadForm.jsx     → Interactive Enquiry Form (POST to API)
+│   │       ├── Navbar.jsx       -> Navigation & Quick Links
+│   │       └── LeadForm.jsx     -> Interactive Enquiry Form (POST to API)
 │   └── package.json
 │
-├── lead-reactivator-backend/    → Node.js + Express.js REST API
+├── lead-reactivator-backend/    -> Node.js + Express.js REST API
 │   ├── models/
-│   │   └── Lead.js              → Mongoose Lead Schema with AI Scoring
+│   │   └── Lead.js              -> Mongoose Lead Schema with AI Scoring
 │   ├── routes/
-│   │   └── leadRoutes.js        → CRUD, Stats, & Reactivation Trigger Endpoints
-│   ├── server.js                → Express Server & MongoDB Connection
-│   ├── seed.js                  → Realistic Enterprise Demo Leads
-│   ├── .env                     → Port & MongoDB URI
+│   │   └── leadRoutes.js        -> CRUD, Stats, & Reactivation Trigger Endpoints
+│   ├── server.js                -> Express Server & MongoDB Connection
+│   ├── seed.js                  -> Realistic Enterprise Demo Leads
+│   ├── .env                     -> Port & MongoDB URI
 │   └── package.json
 │
-├── .gitignore                   → Excludes node_modules, build artifacts, & env
-└── README.md                    → Project Overview & Setup Instructions
+├── .gitignore                   -> Excludes node_modules, build artifacts, & env
+└── README.md                    -> Project Overview & Setup Instructions
 ```
 
 ---
 
-## ⚡ Quick Start Guide
+## Quick Start Guide
 
 ### Prerequisites
 - **Node.js**: v18+ (Tested on v24)
-- **MongoDB**: Local MongoDB running on `mongodb://127.0.0.1:27017` or MongoDB Atlas URI
+- **MongoDB**: Local MongoDB or MongoDB Atlas URI
 
 ---
 
@@ -96,8 +96,8 @@ npm run seed
 # Start server
 npm start
 # Output:
-# ✅ Connected to MongoDB successfully at mongodb://127.0.0.1:27017/ai-lead-reactivator
-# 🚀 Server running on http://localhost:5000
+# Connected to MongoDB successfully
+# Server running on http://localhost:5000
 ```
 
 ---
@@ -132,7 +132,7 @@ npm run dev
 
 ---
 
-## 🔌 REST API Reference
+## REST API Reference
 
 Base URL: `http://localhost:5000/api/leads`
 
@@ -161,11 +161,11 @@ curl -X POST http://localhost:5000/api/leads \
 
 ---
 
-## 🧪 End-to-End Flow Verification
+## End-to-End Flow Verification
 
 1. **Step 1**: Open Public Website at [`http://localhost:3000`](http://localhost:3000).
 2. **Step 2**: Scroll down to the **Submit Lead Inquiry** form.
 3. **Step 3**: Fill in Name, Phone, Email, and Requirement, then click **Submit Lead Inquiry**.
 4. **Step 4**: The inquiry is sent to Express (`POST /api/leads`) and saved in MongoDB.
 5. **Step 5**: Open Admin Portal at [`http://localhost:5173`](http://localhost:5173).
-6. **Step 6**: The lead instantly appears in the **Recent Leads Live Stream** on the Dashboard and under the **Leads Pipeline** table with its calculated AI engagement score and live status actions!
+6. **Step 6**: The lead instantly appears in the **Recent Leads Live Stream** on the Dashboard and under the **Leads Pipeline** table with its calculated AI engagement score and live status actions.

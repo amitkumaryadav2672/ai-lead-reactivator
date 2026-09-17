@@ -65,16 +65,16 @@ async function seedDatabase() {
     const existingCount = await Lead.countDocuments();
     if (existingCount === 0) {
       await Lead.insertMany(sampleLeads);
-      console.log(`✅ Seeded ${sampleLeads.length} sample leads successfully!`);
+      console.log(`Seeded ${sampleLeads.length} sample leads successfully!`);
     } else {
-      console.log(`ℹ️ Database already contains ${existingCount} leads. Skipping seed.`);
+      console.log(`Database already contains ${existingCount} leads. Skipping seed.`);
     }
 
     await mongoose.disconnect();
     console.log('Database connection closed.');
     process.exit(0);
   } catch (err) {
-    console.error('❌ Error seeding database:', err.message);
+    console.error('Error seeding database:', err.message);
     process.exit(1);
   }
 }

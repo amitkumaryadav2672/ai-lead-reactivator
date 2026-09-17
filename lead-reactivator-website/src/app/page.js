@@ -180,7 +180,7 @@ export default function Home() {
             </div>
             <span style={{ fontWeight: 700, color: '#fff' }}>AI Lead Reactivator</span>
           </div>
-          <p>© 2026 AI Lead Reactivator. Full-stack suite with Next.js, Node/Express, MongoDB & React.</p>
+          <p>Copyright (c) 2026 AI Lead Reactivator. Full-stack suite with Next.js, Node/Express, MongoDB and React.</p>
         </div>
       </footer>
     </div>
